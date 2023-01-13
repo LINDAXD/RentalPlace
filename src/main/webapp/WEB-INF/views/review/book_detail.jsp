@@ -19,7 +19,7 @@
 <body>
 
 	<div class="header">
-    <jsp:include page="../../header.jsp"></jsp:include>
+    <jsp:include page="../header.jsp"></jsp:include>
     </div>
 
     <div class="container">
@@ -50,7 +50,7 @@
             <div class="doc">
 
                 <!-- 왼쪽 사이드바 -->
-                <jsp:include page="../lnb.jsp"></jsp:include>
+                <jsp:include page="lnb.jsp"></jsp:include>
                
                 <!-- 본문 -->
                 <div class="content" style="">
@@ -94,8 +94,6 @@
                         </div>
 
                     </div>
-                    
-                  
                     <div style="display: flex; justify-content: center; align-items: center;">
                     
                         <form id="loan" onsubmit="return false;" method="post">
@@ -142,12 +140,14 @@
 
                     </div>
                 <div class="review_title">
-                <h3>REVIEW</h3><input type="button" class="review_button" value="리뷰작성하기">
+                <h3>REVIEW</h3><button class="review_button" onclick="location.href='/board/qnaBoardWrite'" style="cursor: pointer">리뷰작성하기</button>
+                <!-- <input type="button" class="review_button" value="리뷰작성하기"> -->
                 <form id="review_form" method="POST" onsubmit="return false;">
                 <textarea type="text" class="review_input" name="review_input" placeholder="후기를 작성해주세요." cols="140" rows="10" ></textarea><input type="button" class="review_button" value="이미지첨부">
                 </form>
                 </div>
                 </div>
+
 
                 
             </div>
@@ -158,7 +158,7 @@
  
 	
 	<!-- footer -->
-	<jsp:include page="../../footer.jsp"></jsp:include>
+	<jsp:include page="../footer.jsp"></jsp:include>
 	
 	<script>
 	
